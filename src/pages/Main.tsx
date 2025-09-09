@@ -2,8 +2,12 @@ import '../styles/Main.css';
 import main1 from '../images/main1.jpg';
 import { Link } from 'react-router-dom';
 import { useEffect, useState } from 'react';
+import { NewsletterForm } from '../components/main/Newsletter';
+import { useNavigate } from 'react-router-dom';
 
 export function Main() {
+    const navigate = useNavigate(); 
+
     const reviews = [
         { 
             name: 'Chris R', 
@@ -73,7 +77,7 @@ export function Main() {
                 <div className='m-who-inner'>
                     <h1 className='m-who-header'>Who We Are</h1>
                     <p className='m-who-text'>At PlyCraft, we believe that furniture is more than just functional items; they are pieces of art that tell a story. Our mission is to create handcrafted furniture that combines traditional craftsmanship with modern design, resulting in unique pieces that enhance your living spaces.</p>
-                    <button className='m-who-button'>Learn More</button>
+                    <button className='m-who-button' onClick={() => navigate('/about')}>Learn More</button>
                 </div>
             </div>
 
@@ -94,7 +98,7 @@ export function Main() {
                         your furniture is not only beautiful today, but built to last for generations. 
                     </p>
 
-                    <button className='m-materials-button'>Learn More</button>
+                    <button className='m-materials-button' onClick={() => navigate('/products')}>Learn More</button>
                 </div>
                 <img src={main1} alt="Handcrafted wooden chair" className='m-materials-image' />
             </div>
@@ -112,7 +116,7 @@ export function Main() {
                         The result is furniture that is not only beautiful but also meaningful — designed with care, 
                         built to last, and tailored to your lifestyle.
                     </p>
-                    <button className='m-who-button'>Learn More</button>
+                    <button className='m-who-button' onClick={() => navigate('/products')}>Learn More</button>
                 </div>
             </div>
 
@@ -150,7 +154,7 @@ export function Main() {
                         a piece that fits your exact needs. From the initial concept to the final build, every detail is customized 
                         — ensuring that the furniture we create is truly one-of-a-kind, just like your home.  
                     </p>
-                    <button className='m-custom-button'>Get Started</button>
+                    <button className='m-custom-button' onClick={() => navigate('/products')}>Get Started</button>
                 </div>
             </div>
 
@@ -170,38 +174,11 @@ export function Main() {
                 </div>
             </div>
 
-            <div className='m-contact reveal'>
+        <div className='m-contact reveal'>
                 <div className='m-contact-inner'>
                     <h2 className='m-newsletter-header'>Stay in the Loop</h2>
                     <p className='m-newsletter-text'>Get updates on new pieces, custom openings, and workshop stories.</p>
-                    <form className='m-newsletter-form' onSubmit={(e) => { e.preventDefault(); }}>
-                        <div className='m-newsletter-row'>
-                            <input
-                                type="text"
-                                name="firstName"
-                                placeholder="First Name"
-                                className='m-newsletter-input'
-                                aria-label='First name'
-                            />
-                            <input
-                                type="text"
-                                name="lastName"
-                                placeholder="Last Name"
-                                className='m-newsletter-input'
-                                aria-label='Last name'
-                            />
-                        </div>
-                        <input
-                            type="email"
-                            name="email"
-                            required
-                            placeholder="Enter your email address"
-                            className='m-newsletter-input'
-                            aria-label='Email address'
-                        />
-                        <button type='submit' className='m-newsletter-button'>Subscribe</button>
-                        <p className='m-newsletter-legal'>By signing up you agree to receive marketing emails from PlyCraft.</p>
-                    </form>
+                <NewsletterForm />
                 </div>
                 <div className='m-contact-map'>
                     <iframe
@@ -217,3 +194,4 @@ export function Main() {
         </div>
     );
 }
+

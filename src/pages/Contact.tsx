@@ -1,13 +1,53 @@
 import '../styles/Contact.css';
-import React, { useState } from 'react';
+import React, { useState, useMemo } from 'react';
 
 export function Contact() {
-    const [sent, setSent] = useState(false);
+    const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
+    const [message, setMessage] = useState<string>('');
 
-    const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    const API_BASE = useMemo(() => {
+        return (process.env.REACT_APP_BACKEND_URL || 'http://localhost:8000').replace(/\/$/, '');
+    }, []);
+
+    const onSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
-        // Placeholder submit; can be wired to backend later
-        setSent(true);
+        const form = e.currentTarget;
+        const data = new FormData(form);
+
+        const payload = {
+            firstName: String(data.get('firstName') || ''),
+            lastName: String(data.get('lastName') || ''),
+            email: String(data.get('email') || ''),
+            phone: String(data.get('phone') || ''),
+            product: String(data.get('product') || ''),
+            subject: String(data.get('subject') || ''),
+            message: String(data.get('message') || ''),
+        };
+
+        setStatus('loading');
+        setMessage('');
+        try {
+            const res = await fetch(`${API_BASE}/contact/send`, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(payload),
+            });
+            if (!res.ok) {
+                const err = await res.json().catch(() => ({}));
+                throw new Error(err.detail || 'Failed to send message');
+            }
+            setStatus('success');
+            setMessage("Thanks — we’ll get back to you shortly.");
+            form.reset();
+        } catch (err: any) {
+            setStatus('error');
+            setMessage(err.message || 'Something went wrong');
+        } finally {
+            setTimeout(() => {
+                setStatus('idle');
+                setMessage('');
+            }, 3000);
+        }
     };
 
     return (
@@ -67,11 +107,14 @@ export function Contact() {
                             placeholder="Share dimensions, wood preference, style, and any timing considerations."></textarea>
                     </div>
 
-                    {!sent && (
-                        <button type="submit" className="c-button">Send message</button>
+                    <button type="submit" className="c-button" disabled={status === 'loading'}>
+                        {status === 'loading' ? 'Sending…' : 'Send message'}
+                    </button>
+                    {status === 'success' && (
+                        <div className="c-success" role="status">{message}</div>
                     )}
-                    {sent && (
-                        <div className="c-success" role="status">Thanks — we’ll get back to you shortly.</div>
+                    {status === 'error' && (
+                        <div className="c-error" role="alert">{message}</div>
                     )}
                 </form>
             </section>

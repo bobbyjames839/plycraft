@@ -10,6 +10,7 @@ import { About } from './pages/About';
 import { Footer } from './components/other/Footer';
 
 function App() {
+
   return (
     <div className="App">
       <Router>
@@ -18,7 +19,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Main />} />
           <Route path="/products" element={<Products />} />
-          <Route path="/products/:slug" element={<ProductDetail />} />
+          <Route path="/products/:id" element={<ProductDetail />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
@@ -32,7 +33,6 @@ export default App;
 
 function ScrollToTop() {
   const { pathname } = useLocation();
-  // scroll to the very top on every route change
   useEffect(() => {
     window.scrollTo({ top: 0, left: 0, behavior: 'instant' as ScrollBehavior });
   }, [pathname]);

@@ -11,7 +11,6 @@ export const ProductCard: React.FC<ProductCardProps> = ({ title, image, onClick 
     const navigate = useNavigate();
     const handleClick = () => {
         if (onClick) return onClick();
-        // Basic slug from title; detail page renders same product for now
         const slug = title.toLowerCase();
         window.scrollTo({ top: 0, left: 0, behavior: 'instant' as ScrollBehavior });
         navigate(`/products/${encodeURIComponent(slug)}`);

@@ -13,7 +13,7 @@ function App() {
   return (
     <div className="App">
       <Router>
-  <ScrollToTop />
+      <ScrollToTop />
         <Header />
         <Routes>
           <Route path="/" element={<Main />} />

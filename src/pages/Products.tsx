@@ -39,6 +39,8 @@ export function Products() {
         };
     }, [API_BASE]);
 
+
+
     const productsByCategory = useMemo(() => {
         const map: Record<string, Product[]> = { desk: [], drawer: [], table: [], shelves: [] };
         for (const p of products) {
@@ -85,7 +87,12 @@ export function Products() {
                     </div>
                     <div className="p-grid" role="list" aria-label={`${row.title} list`}>
                         {loading && (productsByCategory[row.key].length === 0) && (
-                            <div style={{ padding: '1rem 0', color: '#666' }}>Loading…</div>
+                            <div className='p-loading-span-outer'>
+                                <span className='p-loading-span'></span>
+                                <span className='p-loading-span'></span>
+                                <span className='p-loading-span'></span>
+                                <span className='p-loading-span'></span>
+                            </div>
                         )}
                         {!loading && row.items.length === 0 && (
                             <div style={{ padding: '1rem 0', color: '#666' }}>No items yet.</div>

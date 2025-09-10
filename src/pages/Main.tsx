@@ -1,5 +1,7 @@
 import '../styles/Main.css';
 import main1 from '../images/main1.jpg';
+import main2 from '../images/main2.jpg';
+import main3 from '../images/main3.jpg';
 import { Link } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import { NewsletterForm } from '../components/main/Newsletter';
@@ -112,11 +114,11 @@ export function Main() {
 
                     <button className='m-materials-button' onClick={() => navigate('/products')}>Learn More</button>
                 </div>
-                <img src={main1} alt="Handcrafted wooden chair" className='m-materials-image' />
+                <img src={main2} alt="Handcrafted wooden chair" className='m-materials-image' />
             </div>
 
             <div className='m-who-bottom reveal'>
-                <img src={main1} alt="Handcrafted wooden chair" className='m-who-image' />
+                <img src={main3} alt="Handcrafted wooden chair" className='m-who-image' />
                 <div className='m-who-inner'>
                     <h1 className='m-who-header'>How We Work</h1>
                     <p className='m-who-text'>
@@ -192,14 +194,14 @@ export function Main() {
                     <p className='m-newsletter-text'>Get updates on new pieces, custom openings, and workshop stories.</p>
                 <NewsletterForm />
                 </div>
-                    <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3064.7452895741308!2d-1.2827919559746028!3d54.42362198400753!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNTTCsDI1JzI1LjAiTiAxwrAxNic1MS4wIlc!5e1!3m2!1sen!2suk!4v1757348633201!5m2!1sen!2sukzoom=2" 
-                        height={500}
-                        width={isMobile ? '100%' : 500}
-                        style={{ border: '1px solid var(--color-secondary)', borderRadius: '10px' }}
-                        allowFullScreen={false}
-                        loading="lazy"
-                    ></iframe>
+                <iframe
+                    src="https://maps.google.com/maps?q=Potto%2C%20North%20Yorkshire&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                    width={isMobile ? '100%' : 500}
+                    height={500}
+                    style={{ border: '1px solid var(--color-secondary)', borderRadius: '10px' }}
+                    allowFullScreen={false}
+                    loading="lazy"
+                    />
             </div>
         </div>
     );

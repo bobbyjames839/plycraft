@@ -1,6 +1,6 @@
 import '../styles/About.css';
 import profile from '../images/profile.jpg';
-import main1 from '../images/main1.jpg';
+import main8 from '../images/main8.jpg';
 
 export function About() {
     const team = [
@@ -18,7 +18,7 @@ export function About() {
 
             {/* Our story */}
             <section className="a-section a-story">
-                <img src={main1} alt="Workshop detail" className="a-section-image" />
+                <img src={main8} alt="Workshop detail" className="a-section-image" />
                 <div className="a-section-body">
                     <h2 className="a-section-title">Our story</h2>
                     <p className="a-section-text">

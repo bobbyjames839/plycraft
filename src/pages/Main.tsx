@@ -73,7 +73,7 @@ export function Main() {
                     observer.unobserve(entry.target);
                 }
             });
-        }, { root: null, threshold: 0.35, rootMargin: '0px 0px -10% 0px' });
+        }, { root: null, threshold: 0.25, rootMargin: '0px 0px -10% 0px' });
         els.forEach(el => obs.observe(el));
         return () => obs.disconnect();
     }, []);

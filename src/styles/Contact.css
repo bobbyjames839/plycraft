@@ -36,7 +36,7 @@
     border-radius: 12px;
     padding: 24px;
 }
-.c-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.c-row { display: flex; gap: 16px; }
 .c-field { display: flex; flex-direction: column; gap: 8px; margin: 12px 0; }
 .c-label { font-size: 13px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; opacity: .8; }
 .c-input, .c-textarea {
@@ -99,6 +99,22 @@
 .c-select option { background: var(--color-background); color: var(--color-primary); }
 
 @media (max-width: 900px) {
-    .c-section { padding: 0 28px 60px 28px; }
-    .c-row { grid-template-columns: 1fr; }
+    .c-section { 
+        padding: 0 28px 60px 28px; 
+    }
+    .c-row { 
+        flex-direction: column; 
+        gap: 0; 
+    }
+}
+
+@media (max-width: 560px) {
+    .c-section { 
+        padding: 0 0 40px 0; 
+    }
+    .c-form { 
+        border-radius: 0; 
+        border-left: none; 
+        border-right: none; 
+    }
 }

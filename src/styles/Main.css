@@ -26,6 +26,7 @@
 }
 .m-top-subtitle {
     font-size: 20px;
+    text-align: center;
 }
 
 /* who */
@@ -294,7 +295,7 @@
     font-size: 17px;
     line-height: 1.5;
     width: 60%;
-    min-width: 400px;
+    min-width: 350px;
     text-align: center;
 }
 .m-custom-button {
@@ -432,9 +433,11 @@
     }
     .m-who-bottom {
         padding: 0 25px;
+        height: 520px;
     }
     .m-materials {
         padding: 25px;
+        height: 700px;
     }
     .m-products {
         padding: 0 25px 120px 25px;

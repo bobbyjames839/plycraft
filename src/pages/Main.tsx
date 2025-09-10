@@ -7,6 +7,18 @@ import { useNavigate } from 'react-router-dom';
 
 export function Main() {
     const navigate = useNavigate(); 
+    const [isMobile, setIsMobile] = useState(window.innerWidth < 1228);
+
+    useEffect(() => {
+        const checkWidth = () => setIsMobile(window.innerWidth < 1228);
+
+        // Run once on mount
+        checkWidth();
+
+        // Run again whenever window is resized
+        window.addEventListener("resize", checkWidth);
+        return () => window.removeEventListener("resize", checkWidth);
+    }, []);
 
     const reviews = [
         { 
@@ -103,7 +115,7 @@ export function Main() {
                 <img src={main1} alt="Handcrafted wooden chair" className='m-materials-image' />
             </div>
 
-            <div className='m-who reveal'>
+            <div className='m-who-bottom reveal'>
                 <img src={main1} alt="Handcrafted wooden chair" className='m-who-image' />
                 <div className='m-who-inner'>
                     <h1 className='m-who-header'>How We Work</h1>
@@ -180,16 +192,14 @@ export function Main() {
                     <p className='m-newsletter-text'>Get updates on new pieces, custom openings, and workshop stories.</p>
                 <NewsletterForm />
                 </div>
-                <div className='m-contact-map'>
                     <iframe
                         src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3064.7452895741308!2d-1.2827919559746028!3d54.42362198400753!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNTTCsDI1JzI1LjAiTiAxwrAxNic1MS4wIlc!5e1!3m2!1sen!2suk!4v1757348633201!5m2!1sen!2sukzoom=2" 
                         height={500}
-                        width={600}
+                        width={isMobile ? '100%' : 500}
                         style={{ border: '1px solid var(--color-secondary)', borderRadius: '10px' }}
                         allowFullScreen={false}
                         loading="lazy"
                     ></iframe>
-                </div>
             </div>
         </div>
     );

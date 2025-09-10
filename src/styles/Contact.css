@@ -13,8 +13,16 @@
     height: 65vh;
     margin-bottom: 40px;
 }
-.c-title { font-size: 48px; font-weight: 700; margin: 0; }
-.c-sub { font-size: 18px; opacity: .95; }
+.c-title { 
+    font-size: 48px; 
+    font-weight: 700; 
+    margin: 0; 
+}
+.c-sub { 
+    font-size: 18px;   
+    max-width: 450px;
+    text-align: center; 
+}
 
 .c-section {
     width: 100%;

@@ -23,7 +23,8 @@
 
 .a-sub {
   font-size: 18px;
-  opacity: 0.95;
+  max-width: 450px;
+  text-align: center;
 }
 
 /* Story section (image left, text right like main page blocks) */

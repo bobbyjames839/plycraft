@@ -25,7 +25,8 @@
 }
 .p-sub {
     font-size: 18px;
-    opacity: .95;
+    max-width: 450px;
+    text-align: center;
 }
 
 /* section + row headers */
@@ -96,7 +97,6 @@
 @media (max-width: 640px) {
     .p-section { padding: 0 28px; }
     .p-grid { grid-template-columns: repeat(2, 1fr); gap: 18px; }
-    .p-title { font-size: 38px; }
 }
 
 @media (max-width: 420px) {

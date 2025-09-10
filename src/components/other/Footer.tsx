@@ -24,15 +24,15 @@ export function Footer() {
             </div>
 
             <div className='footer_right'>
-            <p className='h-logo'>PlyCraft</p>
-            <div className='footer_socials'>
-                <a href='https://www.facebook.com/profile.php?id=61553292410630' className='footer_social_link' aria-label="Facebook">
-                <FontAwesomeIcon icon={faFacebook} />
-                </a>
-                <a href='https://www.instagram.com/swalesidevaleting/' className='footer_social_link' aria-label="Instagram">
-                <FontAwesomeIcon icon={faInstagram} />
-                </a>
-            </div>
+                <p className='h-logo'>PlyCraft</p>
+                <div className='footer_socials'>
+                    <a href='https://www.facebook.com/profile.php?id=61553292410630' className='footer_social_link' aria-label="Facebook">
+                    <FontAwesomeIcon icon={faFacebook} />
+                    </a>
+                    <a href='https://www.instagram.com/swalesidevaleting/' className='footer_social_link' aria-label="Instagram">
+                    <FontAwesomeIcon icon={faInstagram} />
+                    </a>
+                </div>
             </div>
         </div>
 

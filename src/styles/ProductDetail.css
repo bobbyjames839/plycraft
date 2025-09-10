@@ -117,6 +117,12 @@
     .pd-product-left { width: 100%; }
 }
 
+@media (max-width: 560px) {
+    .pd-product {
+        padding: 0 25px;
+    }
+}
+
 /* Carousel (mobile) */
 .pd-carousel { position: relative; width: 100%; }
 /* Carousel (mobile) — fixed height, centered image */

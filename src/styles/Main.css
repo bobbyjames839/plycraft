@@ -19,6 +19,15 @@
     align-items: center;    
 }   
 
+.m-top-title {
+    font-size: 68px;
+    font-weight: 700;
+    margin-top: 30vh;
+}
+.m-top-subtitle {
+    font-size: 20px;
+}
+
 /* who */
 
 .m-who {
@@ -285,6 +294,7 @@
     font-size: 17px;
     line-height: 1.5;
     width: 60%;
+    min-width: 400px;
     text-align: center;
 }
 .m-custom-button {
@@ -302,7 +312,7 @@
 }
 
 /* reviews */
-.reviews {
+.m-reviews {
     width: 100%;
     padding: 100px 50px 100px 50px;
     box-sizing: border-box;
@@ -310,30 +320,31 @@
     flex-direction: column;
     align-items: flex-start;
 }
-.reviews-header {
+.m-reviews-header {
     font-size: 32px;
+    line-height: 40px;
     font-weight: 600;
     margin: 0 0 6px 0;
 }
-.reviews-text {
+.m-reviews-text {
     font-size: 17px;
     line-height: 1.5;
     max-width: 700px;
     margin: 0 0 40px 0;
 }
-.reviews-row {
+.m-reviews-row {
     width: 100%;
     overflow: hidden;
     mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
 }
-.review-track {
+.m-review-track {
     display: flex;
     gap: 20px;
     animation: review-scroll 45s linear infinite;
 }
-.review-track.paused { animation-play-state: paused; }
+.m-review-track.paused { animation-play-state: paused; }
 
-.review-card {
+.m-review-card {
     flex: 0 0 300px;
     background: var(--color-muted);
     border: 1px solid var(--color-secondary);
@@ -344,11 +355,11 @@
     flex-direction: column;
     gap: 10px;
 }
-.review-name { font-size: 14px; font-weight: 600; }
-.review-stars { font-size: 16px; letter-spacing: 2px; }
-.review-text { font-size: 14px; line-height: 1.4; }
+.m-review-name { font-size: 14px; font-weight: 600; }
+.m-review-stars { font-size: 16px; letter-spacing: 2px; }
+.m-review-text { font-size: 14px; line-height: 1.4; }
 
-@keyframes review-scroll {
+@keyframes m-review-scroll {
     0% { transform: translateX(0); }
     100% { transform: translateX(-50%); }
 }
@@ -410,3 +421,34 @@
 .m-newsletter-button:hover { background: var(--color-accent); box-shadow: 0 4px 12px -4px rgba(0,0,0,0.25); }
 .m-newsletter-button:active { transform: translateY(1px); }
 .m-newsletter-legal { font-size: 11px; line-height: 1.4; color: #222; max-width: 560px; margin: 4px 0 0 4px; }
+
+
+@media (max-width: 560px) {
+    .m-top-title {
+        font-size: 48px;
+    }
+    .m-who {
+        padding: 0 25px;
+    }
+    .m-who-bottom {
+        padding: 0 25px;
+    }
+    .m-materials {
+        padding: 25px;
+    }
+    .m-products {
+        padding: 0 25px 120px 25px;
+    }
+    .m-reviews {
+        padding: 100px 25px 100px 25px;
+    }
+    .m-contact {
+        padding: 0 25px 100px 25px;
+    }
+    .m-newsletter-header {
+        line-height: 40px;
+    }
+    .m-newsletter-text {
+        margin: 0 0 22px 0;
+    }
+}

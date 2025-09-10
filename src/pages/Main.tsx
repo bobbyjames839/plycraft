@@ -80,8 +80,8 @@ export function Main() {
     return (
         <div className="m-page">
             <div className="m-top reveal">
-                <h1 className="text-8xl font-bold -mb-1 mt-[30vh]">PlyCraft</h1>
-                <p className="text-[18px] mt-4">Handcrafted Furniture for Inspired Spaces</p>
+                <h1 className="m-top-title">PlyCraft</h1>
+                <p className="m-top-subtitle">Handcrafted Furniture for Inspired Spaces</p>
             </div>
 
             <div className='m-who reveal'>
@@ -170,16 +170,16 @@ export function Main() {
                 </div>
             </div>
 
-            <div className='reviews reveal'>
-                <h1 className='reviews-header'>What Our Customers Say</h1>
-                <p className='reviews-text'>Hear from those who have experienced the craftsmanship and care of PlyCraft furniture.</p>
-                <div className='reviews-row' onMouseEnter={() => setPaused(true)} onMouseLeave={() => setPaused(false)}>
-                    <div className={`review-track ${paused ? 'paused' : ''}`}>
+            <div className='m-reviews reveal'>
+                <h1 className='m-reviews-header'>What Our Customers Say</h1>
+                <p className='m-reviews-text'>Hear from those who have experienced the craftsmanship and care of PlyCraft furniture.</p>
+                <div className='m-reviews-row' onMouseEnter={() => setPaused(true)} onMouseLeave={() => setPaused(false)}>
+                    <div className={`m-review-track ${paused ? 'paused' : ''}`}>
                         {loopReviews.map((r, i) => (
-                            <div className='review-card' key={i}>
-                                <div className='review-name'>{r.name}</div>
-                                <div className='review-stars'>{'★★★★★'.slice(0, r.rating)}</div>
-                                <div className='review-text'>{r.text}</div>
+                            <div className='m-review-card' key={i}>
+                                <div className='m-review-name'>{r.name}</div>
+                                <div className='m-review-stars'>{'★★★★★'.slice(0, r.rating)}</div>
+                                <div className='m-review-text'>{r.text}</div>
                             </div>
                         ))}
                     </div>

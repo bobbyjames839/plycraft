@@ -27,18 +27,18 @@
 }
 
 .footer_subtitle {
-    font-size: 22px;
-    font-weight: 600;
+    font-size: 20px;
+    font-weight: 500;
     border-bottom: 1px solid var(--color-primary);
     width: 140px;
-    padding-bottom: 5px;
+    padding-bottom: 3px;
     margin-bottom: 24px;
 }
 
 .footer_para {
-    font-size: 17px;
+    font-size: 16px;
     text-decoration: none;
-    margin-bottom: 12px;
+    margin-bottom:9px;
     color: var(--lighter);
 }
 

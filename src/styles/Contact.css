@@ -1,120 +1,216 @@
+/* Page & hero */
 .c-page {
-    background: var(--color-background);
+  background: var(--color-background);
 }
 
 .c-top {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-image: url('../images/main1.jpg');
-    background-size: cover;
-    background-position: center;
-    height: 65vh;
-    margin-bottom: 40px;
-}
-.c-title { 
-    font-size: 48px; 
-    font-weight: 700; 
-    margin: 0; 
-}
-.c-sub { 
-    font-size: 18px;   
-    max-width: 450px;
-    text-align: center; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-image: url('../images/main1.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 65vh;
+  margin-bottom: 40px;
 }
 
+.c-title {
+  margin: 0;
+  font-size: 48px;
+  font-weight: 700;
+}
+
+.c-sub {
+  width: 100%;
+  max-width: 450px;
+  font-size: 18px;
+  text-align: center;
+  margin: 0;
+}
+
+/* Layout */
 .c-section {
-    width: 100%;
-    padding: 0 100px 80px 100px;
-    box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 0 100px 80px;
+  display: flex;
+  justify-content: center;
 }
 
 .c-form {
-    background: var(--color-muted);
-    border: 1px solid var(--color-secondary);
-    border-radius: 12px;
-    padding: 24px;
-}
-.c-row { display: flex; gap: 16px; }
-.c-field { display: flex; flex-direction: column; gap: 8px; margin-bottom: 25px; flex: 1;}
-.c-label { font-size: 13px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; opacity: .8; }
-.c-input, .c-textarea {
-    padding: 12px 14px;
-    border-radius: 10px;
-    border: 1px solid var(--color-secondary);
-    background: var(--color-background);
-    font-size: 16px;
-    outline: none;
-    transition: border-color .2s, box-shadow .2s;
-}
-.c-input:focus, .c-textarea:focus { border-color: var(--color-accent); box-shadow: 0 0 0 3px rgba(0,0,0,.08); }
-.c-textarea { min-height: 140px; resize: vertical; }
-
-.c-button {
-    margin-top: 8px;
-    padding: 12px 20px;
-    background: var(--color-secondary);
-    border: 1px solid var(--color-accent);
-    border-radius: 10px;
-    font-size: 16px;
-    font-weight: 700;
-    cursor: pointer;
-    transition: background .2s, transform .2s, box-shadow .2s;
-}
-.c-button:hover { background: var(--color-accent); box-shadow: 0 10px 24px -12px rgba(0,0,0,.35); transform: translateY(-1px); }
-.c-button:active { transform: translateY(0); box-shadow: none; }
-
-.c-success {
-    margin-top: 10px;
-    font-size: 14px;
-    padding: 10px 12px;
-    border-radius: 10px;
-    border: 1px solid var(--color-secondary);
-    background: var(--color-surface);
+  width: 100%;
+  max-width: 1200px;
 }
 
+.c-form-head {
+  margin-bottom: 28px;
+}
+
+.c-form-title {
+  margin: 0 0 6px;
+  font-size: 32px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.c-form-sub {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.5;
+  max-width: 800px;
+  color: inherit;
+}
+
+.c-row {
+  display: flex;
+  gap: 16px;
+}
+
+/* Fields */
+.c-field {
+  position: relative;
+  flex: 1;
+  margin-bottom: 16px;
+}
+
+.c-label {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  transition: transform 0.2s ease, color 0.2s ease, opacity 0.2s ease;
+  opacity: 1;
+  pointer-events: none;
+}
+
+/* Controls (inputs, textarea, select) */
+.c-input,
+.c-textarea,
 .c-select {
-    padding: 12px 14px;
-    border-radius: 10px;
-    border: 1px solid var(--color-secondary);
-    background: var(--color-background);
-    font-size: 16px;
-    outline: none;
-    transition: border-color .2s, box-shadow .2s, background .2s;
-    color: var(--color-primary);
-    cursor: pointer;
-    /* Custom arrow */
-    -webkit-appearance: none;
-    appearance: none;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%233e2c18' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
-    background-repeat: no-repeat;
-    background-position: right 12px center;
-    background-size: 18px;
-    padding-right: 44px; /* space for arrow */
+  width: 100%;
+  padding: 20px 16px 12px 16px; /* top space for floating label */
+  border: 1px solid #000;
+  border-radius: 8px;
+  font-size: 16px;
+  background: #fdfcfb;
+  color: #000;
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
 }
-.c-select:focus { border-color: var(--color-accent); box-shadow: 0 0 0 3px rgba(0,0,0,.08); }
-.c-select:hover { border-color: var(--color-accent); }
-.c-select:disabled { opacity: .6; cursor: not-allowed; }
-.c-select option { background: var(--color-background); color: var(--color-primary); }
 
+.c-input:focus,
+.c-textarea:focus,
+.c-select:focus {
+  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.12);
+}
+
+/* Textarea */
+.c-textarea {
+  min-height: 140px;
+  resize: vertical;
+}
+
+/* Floating label */
+.c-floating .c-label {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  transform-origin: 0 0;
+  padding: 0 6px;
+  border-radius: 4px;
+  background: linear-gradient(#fdfcfb, #fdfcfb);
+}
+
+/* Hide placeholder so label can sit there */
+.c-input::placeholder,
+.c-textarea::placeholder {
+  color: transparent;
+}
+
+/* Raise label when focused or has content */
+.c-input:not(:placeholder-shown) + .c-label,
+.c-textarea:not(:placeholder-shown) + .c-label,
+.c-input:focus + .c-label,
+.c-textarea:focus + .c-label,
+select.c-select--floating:focus + .c-label,
+select.c-select--floating:not([value=""]) + .c-label {
+  transform: translate3d(-2px, -12px, 0) scale(0.8);
+}
+
+/* Select */
+.c-select {
+  cursor: pointer;
+  -webkit-appearance: none;
+  appearance: none;
+  background-image:
+    linear-gradient(#fdfcfb, #fdfcfb),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='22' height='22' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 16px center, right 16px center;
+  background-size: 18px, 18px;
+}
+
+.c-select-field .c-label {
+  top: 16px;
+}
+
+/* Required asterisk */
+.c-req {
+  color: #b53100;
+  font-weight: 700;
+  margin-left: 2px;
+}
+
+/* Button */
+.c-button {
+  width: 100%;
+  margin-top: 8px;
+  padding: 12px 16px;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  background: var(--color-muted);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  font-weight: 500;
+}
+
+.c-button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 20px -12px rgba(0, 0, 0, 0.35);
+}
+
+/* Messages */
+.c-success,
+.c-error {
+  margin-top: 10px;
+  font-size: 14px;
+  padding: 10px 12px;
+  border-radius: 8px;
+  background: var(--color-surface);
+  border: 1px solid var(--color-secondary);
+}
+
+.c-error {
+  border-color: #b53100;
+}
+
+/* Responsive */
 @media (max-width: 900px) {
-    .c-section { 
-        padding: 0 28px 60px 28px; 
-    }
-    .c-row { 
-        flex-direction: column; 
-        gap: 0; 
-    }
+  .c-section {
+    padding: 0 28px 60px;
+  }
+  .c-row {
+    flex-direction: column;
+    gap: 0;
+  }
 }
 
 @media (max-width: 560px) {
-    .c-section { 
-        padding: 0 0 40px 0; 
-    }
-    .c-form { 
-        border-radius: 0; 
-        border-left: none; 
-        border-right: none; 
-    }
+  .c-section {
+    padding: 0 0 40px;
+  }
+  .c-form-title {
+    font-size: 26px;
+  }
 }

@@ -1,0 +1,14 @@
+.t-stack { position: fixed; top: 18px; right: 18px; display: flex; flex-direction: column; gap: 12px; z-index: 4000; max-width: min(92vw, 380px); }
+.t-item { position: relative; background: #111; color: #fff; padding: 14px 44px 14px 16px; border-radius: 14px; font-size: 15px; box-shadow: 0 10px 32px -12px rgba(0,0,0,.55), 0 4px 10px -4px rgba(0,0,0,.35); overflow: hidden; display: flex; align-items: flex-start; gap: 10px; animation: t-enter .45s cubic-bezier(.4,.8,.3,1); border:1px solid rgba(255,255,255,.12); backdrop-filter: blur(6px); }
+.t-item:focus-visible { outline: 2px solid #fff; outline-offset: 2px; }
+.t-item.t-success { background: linear-gradient(135deg,#0d4e00,#0d4e00 38%,#0a8000); }
+.t-item.t-error { background: linear-gradient(135deg,#5e0000,#5e0000 38%,#9d0000); }
+.t-item.t-info { background: linear-gradient(135deg,#00305e,#00305e 38%,#004d9d); }
+.t-msg { flex: 1; line-height: 1.4; }
+.t-close { position: absolute; top: 6px; right: 8px; background: none; border: none; color: #fff; font-size: 20px; cursor: pointer; line-height: 1; padding: 4px 6px; border-radius: 6px; }
+.t-close:hover { background: rgba(255,255,255,.15); }
+.t-bar { position: absolute; left: 0; bottom: 0; height: 3px; background: rgba(255,255,255,.65); width: 100%; transform-origin: left; animation: t-bar linear forwards; }
+@keyframes t-bar { from { transform: scaleX(1); } to { transform: scaleX(0); } }
+@keyframes t-enter { 0% { transform: translateY(-14px) scale(.92); opacity: 0; } 60% { transform: translateY(2px) scale(1.02); opacity: 1; } 100% { transform: translateY(0) scale(1); opacity: 1; } }
+
+@media (max-width: 560px) { .t-stack { top: auto; bottom: 18px; right: 10px; left: 10px; max-width: unset; } }

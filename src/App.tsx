@@ -8,23 +8,28 @@ import { ProductDetail } from './pages/ProductDetail';
 import { Contact } from './pages/Contact';
 import { About } from './pages/About';
 import { Footer } from './components/other/Footer';
+import { ToastProvider } from './components/other/Toast';
+import { ChatWidget } from './components/other/ChatWidget';
 
 function App() {
 
   return (
     <div className="App">
-      <Router>
-      <ScrollToTop />
-        <Header />
-        <Routes>
-          <Route path="/" element={<Main />} />
-          <Route path="/products" element={<Products />} />
-          <Route path="/products/:id" element={<ProductDetail />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/contact" element={<Contact />} />
-        </Routes>
-        <Footer />
-      </Router>
+      <ToastProvider>
+        <Router>
+        <ScrollToTop />
+          <Header />
+          <Routes>
+            <Route path="/" element={<Main />} />
+            <Route path="/products" element={<Products />} />
+            <Route path="/products/:id" element={<ProductDetail />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/contact" element={<Contact />} />
+          </Routes>
+          <Footer />
+          <ChatWidget />
+        </Router>
+      </ToastProvider>
     </div>
   );
 }

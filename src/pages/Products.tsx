@@ -14,6 +14,7 @@ export function Products() {
     const [products, setProducts] = useState<Product[]>([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState<string | null>(null);
+    const screenWidth = window.innerWidth;
 
     const API_BASE = process.env.REACT_APP_BACKEND_URL
 
@@ -86,12 +87,12 @@ export function Products() {
                         <p className="p-row-sub">{row.subtitle}</p>
                     </div>
                     <div className="p-grid" role="list" aria-label={`${row.title} list`}>
-                        {loading && (productsByCategory[row.key].length === 0) && (
+                        {!loading && (productsByCategory[row.key].length === 0) && (
                             <div className='p-loading-span-outer'>
                                 <span className='p-loading-span'></span>
                                 <span className='p-loading-span'></span>
-                                <span className='p-loading-span'></span>
-                                <span className='p-loading-span'></span>
+                                {screenWidth > 640 && <span className='p-loading-span'></span>}
+                                {screenWidth > 1000 && <span className='p-loading-span'></span>}
                             </div>
                         )}
                         {!loading && row.items.length === 0 && (

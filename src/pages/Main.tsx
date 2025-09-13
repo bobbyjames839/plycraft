@@ -1,5 +1,5 @@
 import '../styles/Main.css';
-import main1 from '../images/main1.jpg';
+import main7 from '../images/main7.jpg';
 import main2 from '../images/main2.jpg';
 import main3 from '../images/main3.jpg';
 import { Link } from 'react-router-dom';
@@ -87,7 +87,7 @@ export function Main() {
             </div>
 
             <div className='m-who reveal'>
-                <img src={main1} alt="Handcrafted wooden chair" className='m-who-image' />
+                <img src={main7} alt="Handcrafted wooden chair" className='m-who-image' />
                 <div className='m-who-inner'>
                     <h1 className='m-who-header'>Who We Are</h1>
                     <p className='m-who-text'>At PlyCraft, we believe that furniture is more than just functional items; they are pieces of art that tell a story. Our mission is to create handcrafted furniture that combines traditional craftsmanship with modern design, resulting in unique pieces that enhance your living spaces.</p>

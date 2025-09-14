@@ -96,3 +96,16 @@
     align-self: flex-end;
     border-bottom-right-radius: 2px;
 }
+
+@media (max-width: 600px) {
+    .pc-panel-open {
+        width: 94%;
+        right: 3%;
+        bottom: 80px;
+    }
+
+    .pc-chat-fab {
+        right: 3%;
+        bottom: 20px;
+    }
+}

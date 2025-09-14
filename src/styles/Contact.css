@@ -33,7 +33,7 @@
 .c-section {
   box-sizing: border-box;
   width: 100%;
-  padding: 0 100px 80px;
+  padding: 0 80px 100px 80px;
   display: flex;
   justify-content: center;
 }
@@ -198,7 +198,7 @@ select.c-select--floating:not([value=""]) + .c-label {
 /* Responsive */
 @media (max-width: 900px) {
   .c-section {
-    padding: 0 28px 60px;
+    padding: 0 28px 60px 28px;
   }
   .c-row {
     flex-direction: column;
@@ -208,7 +208,7 @@ select.c-select--floating:not([value=""]) + .c-label {
 
 @media (max-width: 560px) {
   .c-section {
-    padding: 0 0 40px;
+    padding: 0 10px 40px 10px;
   }
   .c-form-title {
     font-size: 26px;

@@ -390,6 +390,12 @@
     flex-direction: column;
 }
 
+@media (max-width: 700px) {
+    .m-contact-inner {
+        padding: 20px 32px;
+    }
+}
+
 .m-newsletter-header { font-size: 32px; font-weight: 600; margin: 0 0 6px 0; }
 .m-newsletter-text { font-size: 17px; line-height: 1.5; margin: 0 0 44px 0 }
 .m-newsletter-form { display: flex; flex-direction: column; gap: 16px; width: 100%; }

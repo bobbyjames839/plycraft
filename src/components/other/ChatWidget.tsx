@@ -84,6 +84,14 @@ export const ChatWidget: React.FC = () => {
             placeholder="Type your message..."
             value={input}
             onChange={e => setInput(e.target.value)}
+            onKeyDown={e => {
+              if (e.key === 'Enter' && !e.shiftKey) {
+                e.preventDefault();
+                sendMessage();
+              }
+            }}
+            inputMode="text"
+            autoComplete="on"
           />
           <button className="pc-chat-send" disabled={!canSend} onClick={sendMessage} aria-label="Send message">
             <FontAwesomeIcon icon={faPaperPlane} />

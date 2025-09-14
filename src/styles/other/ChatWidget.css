@@ -62,7 +62,8 @@
     background-color: var(--color-muted);
     padding: 12px 10px;
     border-radius: 5px;
-    font-size: 14px;
+    font-size: 16px; /* >=16px prevents iOS Safari zoom on focus */
+    -webkit-text-size-adjust: 100%;
 }
 
 .pc-chat-body {
@@ -102,6 +103,15 @@
         width: 94%;
         right: 3%;
         bottom: 80px;
+    }
+
+    .pc-chat-body {
+        height: 350px;
+    }
+
+    /* Ensure input remains at least 16px to avoid zoom */
+    .pc-chat-input {
+        font-size: 16px;
     }
 
     .pc-chat-fab {

@@ -90,22 +90,19 @@
     transition: .3s;
 }
 
-.prod-card-overlay {
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-    padding: 10px;
-    width: 100%;
-    box-sizing: border-box;
-}
-
 .prod-card-title {
+    position: absolute;
+    bottom: 12px;
+    left: 12px;
     margin: 0;
     font-size: 18px;
     font-weight: 500;
 }
 
 .prod-card-span {
+    position: absolute;
+    top: 12px;
+    right: 12px;
     padding: 8px 12px;
     border-radius: 30px;
     background-color: rgba(255, 255, 255,.3);

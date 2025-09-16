@@ -83,7 +83,7 @@ export function Main() {
         <div className="m-page">
             <div className="m-top reveal">
                 <h1 className="m-top-title">PlyCraft</h1>
-                <p className="m-top-subtitle">Handcrafted Furniture for Inspired Spaces</p>
+                <p className="m-top-subtitle">Innovative design, simple living</p>
             </div>
 
             <div className='m-who reveal'>
@@ -154,6 +154,18 @@ export function Main() {
                     <div className='product-item product-4'>
                         <Link to="/products" className="product-cta" aria-label="View products" onClick={() => window.scrollTo({ top: 0, left: 0, behavior: 'instant' as ScrollBehavior })}>→</Link>
                         <h3>Shelves</h3>
+                    </div>
+                    <div className='product-item product-5'>
+                        <Link to="/products" className="product-cta" aria-label="View products" onClick={() => window.scrollTo({ top: 0, left: 0, behavior: 'instant' as ScrollBehavior })}>→</Link>
+                        <h3>Storage</h3>
+                    </div>
+                    <div className='product-item product-6'>
+                        <Link to="/products" className="product-cta" aria-label="View products" onClick={() => window.scrollTo({ top: 0, left: 0, behavior: 'instant' as ScrollBehavior })}>→</Link>
+                        <h3>Seating</h3>
+                    </div>
+                    <div className='product-item product-7'>
+                        <Link to="/products" className="product-cta" aria-label="View products" onClick={() => window.scrollTo({ top: 0, left: 0, behavior: 'instant' as ScrollBehavior })}>→</Link>
+                        <h3>TV Stands</h3>
                     </div>
                 </div>
             </div>

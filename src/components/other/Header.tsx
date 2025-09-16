@@ -40,7 +40,7 @@ export function Header() {
   return (
     <>
       <div className="h-header">
-        <p className="h-logo">PlyCraft</p>
+        <p className="h-logo">PlyCraft.</p>
 
         {/* Desktop links */}
         <div className="h-right">

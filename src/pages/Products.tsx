@@ -53,13 +53,16 @@ export function Products() {
     }, [products]);
 
     const rows = [
-        { title: 'Desks',   subtitle: 'Writing, Executive, Corner, Standing',   key: 'desk' },
-        { title: 'Drawers', subtitle: 'Low, Tall, Modular, Media',              key: 'drawer' },
         { title: 'Tables',  subtitle: 'Dining, Coffee, Side, Console',          key: 'table' },
+        { title: 'Desks',   subtitle: 'Writing, Executive, Corner, Standing',   key: 'desk' },
+        { title: 'Drawers', subtitle: 'Low, Tall, Modular, Media',              key: 'drawers' },
         { title: 'Shelves', subtitle: 'Floating, Ladder, Wall, Freestanding',   key: 'shelves' },
+        { title: 'Storage', subtitle: 'Floating, Ladder, Wall, Freestanding',   key: 'storage' },
+        { title: 'Seating', subtitle: 'Floating, Ladder, Wall, Freestanding',   key: 'seating' },
+        { title: 'TV Stands', subtitle: 'Floating, Ladder, Wall, Freestanding',   key: 'tv_stands' },
     ].map((row) => ({
         ...row,
-        items: (productsByCategory[row.key] || []).slice(0, 4).map((p, i) => ({
+        items: (productsByCategory[row.key] || []).map((p, i) => ({
             id: (p as Product).id,
             title: p.title,
             image: p.image.startsWith('http') ? p.image : `${API_BASE}${p.image}`,

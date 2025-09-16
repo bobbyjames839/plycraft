@@ -20,12 +20,12 @@
 }   
 
 .m-top-title {
-    font-size: 68px;
+    font-size: 78px;
     font-weight: 700;
-    margin-top: 30vh;
+    margin: 30vh 0 -15px 0;
 }
 .m-top-subtitle {
-    font-size: 20px;
+    font-size: 24px;
     text-align: center;
 }
 
@@ -267,6 +267,9 @@
 .product-2 { background-image: url('../images/product2.png'); }
 .product-3 { background-image: url('../images/product3.png'); }
 .product-4 { background-image: url('../images/product4.png'); }
+.product-5 { background-image: url('../images/product4.png'); }
+.product-6 { background-image: url('../images/product4.png'); }
+.product-7 { background-image: url('../images/product4.png'); }
 
 /* custom */
 

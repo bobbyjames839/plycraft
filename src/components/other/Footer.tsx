@@ -18,7 +18,7 @@ export function Footer() {
                     <div className='footer_section'>
                         <h3 className='footer_subtitle'>Contact</h3>
                         <p className='footer_para'>07786 241225</p>
-                        <p className='footer_para'>info@companyname.com</p>
+                        <p className='footer_para'>enquiries@plycraft.co.uk</p>
                         <p className='footer_para'>Potto, North Yorkshire</p>
                     </div>
                 </div>

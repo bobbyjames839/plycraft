@@ -23,10 +23,8 @@ export const ProductCard: React.FC<ProductCardProps> = ({ id, title, image, onCl
 
     return (
         <div className="prod-card" role="listitem" onClick={handleClick} style={{ backgroundImage: `url(${image})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
-            <div className="prod-card-overlay">
-                <h3 className="prod-card-title">{title}</h3>
-                <span className='prod-card-span'>Made to order</span>
-            </div>
+            <h3 className="prod-card-title">{title}</h3>
+            <span className='prod-card-span'>Made to order</span>
         </div>
     );
 };

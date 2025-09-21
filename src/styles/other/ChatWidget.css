@@ -2,7 +2,7 @@
     position: fixed;
     bottom: 32px;
     right: 32px;
-    padding: 11px 13px;
+    padding: 13px 12px 7px 12px;
     cursor: pointer;
     font-size: 21px;
     border-radius: 50%;
@@ -51,7 +51,7 @@
     cursor: pointer;
     background-color: black;
     color: white;
-    padding: 10px;
+    padding: 14px 10px 8px 10px;
     border-radius: 5px;
 }
 
